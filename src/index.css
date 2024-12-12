@@ -3,13 +3,18 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply antialiased;
+  }
+  
   body {
-    @apply bg-gray-950 text-white;
+    @apply bg-gray-950 text-white min-h-screen;
   }
 }
 
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -22,4 +27,11 @@
 
 ::-webkit-scrollbar-thumb:hover {
   @apply from-blue-500 to-purple-500;
+}
+
+@media (max-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
 }

@@ -20,7 +20,7 @@ function App() {
         sections={sections} 
       />
       
-      <main className="container mx-auto px-4 pb-16">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 pb-16 max-w-7xl">
         <About isActive={activeSection === 'about'} />
         <Experience isActive={activeSection === 'experience'} />
         <Education isActive={activeSection === 'education'} />

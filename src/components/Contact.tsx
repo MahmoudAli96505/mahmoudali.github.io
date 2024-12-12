@@ -57,12 +57,12 @@ export const Contact = ({ isActive }: ContactProps) => {
                 <Phone className="w-6 h-6 text-white" />
               </div>
               <a 
-                href={`https://wa.me/${contactInfo.phone}`}
+                href={`https://wa.me/201097831301`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xl text-gray-300 hover:text-white transition-colors"
               >
-                +{contactInfo.phone}
+                {contactInfo.phone}
               </a>
             </motion.div>
             <motion.div 

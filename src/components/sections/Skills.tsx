@@ -25,7 +25,7 @@ export const Skills = ({ isActive }: SkillsProps) => {
       className={`${isActive ? 'block' : 'hidden'}`}
     >
       <div className="grid gap-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
@@ -33,11 +33,11 @@ export const Skills = ({ isActive }: SkillsProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border border-gray-800"
+              className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-2xl border border-gray-800"
             >
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3 sm:gap-4">
                 <div className="text-blue-400">{skill.icon}</div>
-                <span className="text-lg text-gray-300">{skill.name}</span>
+                <span className="text-base sm:text-lg text-gray-300">{skill.name}</span>
               </div>
             </motion.div>
           ))}
@@ -45,25 +45,25 @@ export const Skills = ({ isActive }: SkillsProps) => {
         
         <motion.div
           whileHover={hoverScale}
-          className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-800"
+          className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-2xl border border-gray-800"
         >
-          <h3 className="text-2xl font-bold mb-6 flex items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-            <Languages className="w-8 h-8" /> Languages
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 flex items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+            <Languages className="w-6 h-6 sm:w-8 sm:h-8" /> Languages
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <motion.div 
               whileHover={hoverScale}
-              className="p-6 bg-gray-800/50 rounded-xl border border-gray-700"
+              className="p-4 sm:p-6 bg-gray-800/50 rounded-xl border border-gray-700"
             >
-              <p className="text-xl font-semibold text-white mb-2">English</p>
-              <p className="text-gray-300">Intermediate (B1/B2)</p>
+              <p className="text-lg sm:text-xl font-semibold text-white mb-2">English</p>
+              <p className="text-base sm:text-lg text-gray-300">Intermediate (B1/B2)</p>
             </motion.div>
             <motion.div 
               whileHover={hoverScale}
-              className="p-6 bg-gray-800/50 rounded-xl border border-gray-700"
+              className="p-4 sm:p-6 bg-gray-800/50 rounded-xl border border-gray-700"
             >
-              <p className="text-xl font-semibold text-white mb-2">Arabic</p>
-              <p className="text-gray-300">Native</p>
+              <p className="text-lg sm:text-xl font-semibold text-white mb-2">Arabic</p>
+              <p className="text-base sm:text-lg text-gray-300">Native</p>
             </motion.div>
           </div>
         </motion.div>

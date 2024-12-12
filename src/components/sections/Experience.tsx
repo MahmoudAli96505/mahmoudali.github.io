@@ -86,26 +86,26 @@ export const Experience = ({ isActive }: ExperienceProps) => {
           <motion.div
             key={index}
             whileHover={hoverScale}
-            className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-800"
+            className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-2xl border border-gray-800"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
           >
-            <div className="flex justify-between items-start mb-4">
+            <div className="flex flex-col sm:flex-row justify-between items-start gap-4 sm:gap-0 mb-4">
               <div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   {job.title}
                 </h3>
-                <p className="text-xl text-gray-400 mt-1">{job.company}</p>
+                <p className="text-lg sm:text-xl text-gray-400 mt-1">{job.company}</p>
               </div>
-              <div className="flex items-center gap-2 text-gray-400">
-                <Calendar className="w-5 h-5" />
+              <div className="flex items-center gap-2 text-gray-400 text-sm sm:text-base">
+                <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>{job.period}</span>
               </div>
             </div>
             <ul className="mt-4 space-y-2">
               {job.duties.map((duty, i) => (
-                <li key={i} className="text-gray-300 flex items-start text-lg">
+                <li key={i} className="text-gray-300 flex items-start text-base sm:text-lg">
                   <span className="mr-3 text-blue-400">•</span> {duty}
                 </li>
               ))}
